@@ -1,2 +1,91 @@
 .carousel-container {
+  width: 100%;
+  height: calc(100vh - 6.5vh);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--carousel-background);
+}
+
+.carousel-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 150px;
+  padding-top: 60px;
+}
+
+.carousel-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--carousel-title);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  margin: 0;
+  z-index: 2;
+}
+
+.carousel-button-container {
+  display: flex;
+  gap: 30px;
+  width: auto;
+}
+
+.carousel-button {
+  padding: 10px 20px;
+  background-color: var(--carousel-title);
+  color: var(--carousel-button);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  transform-origin: center;
+  z-index: 2;
+}
+
+.carousel-button:hover {
+  transform: scale(1.1);
+  background-color: var(--carousel-button-hover);
+}
+
+.carousel-slider {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  top: 30%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: sliderRotation var(--animationTime) infinite linear;
+  z-index: 1;
+}
+
+.carousel-item {
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(
+      calc((var(--item-position) - 1) * (360 / var(--item-total)) * 1deg)
+    )
+    translateZ(550px);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@keyframes sliderRotation {
+  from {
+    transform: perspective(var(--perspectiveZ)) rotateX(var(--perspectiveX))
+      rotateY(0deg);
+  }
+  to {
+    transform: perspective(var(--perspectiveZ)) rotateX(var(--perspectiveX))
+      rotateY(360deg);
+  }
 }

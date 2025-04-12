@@ -6,11 +6,16 @@
 }
 
 :root {
-  --navbar-background: #333;
-  --navbar-title: #fff;
-  --navbar-title-hover: #4f46e5;
-  --navbar-link: #ce1414;
-  --navbar-link-hover: #ccc;
+  --navbar-background: #333533;
+  --navbar-title: #f5cb5c;
+  --navbar-title-hover: #e1b14d;
+  --navbar-link: #f5cb5c;
+  --navbar-link-hover: #e1b14d;
+
+  --carousel-background: #242423;
+  --carousel-title: #f5cb5c;
+  --caoursel-button: #000;
+  --carousel-button-hover: #e1b14d;
 
   --color-primary: #4f46e5;
   --color-secondary: #3b82f6;

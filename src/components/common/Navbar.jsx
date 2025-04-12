@@ -16,11 +16,11 @@ export default function Navbar() {
   return (
     <div className="navbar-container">
       <div className="navbar-title">
-        <span onClick={Home}>My Website</span>
+        <span onClick={Home}>CSS Project</span>
       </div>
       <div className="navbar-links">
         <span onClick={Carousel} className="navbar-link">
-          Home
+          3D Carousel
         </span>
         <span onClick={Carousel} className="navbar-link">
           Example
