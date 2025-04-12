@@ -1,6 +1,6 @@
 .carousel-container {
   width: 100%;
-  height: calc(100vh - 6.5vh);
+  height: calc(100dvh - 6.5dvh);
   text-align: center;
   position: relative;
   overflow: hidden;
