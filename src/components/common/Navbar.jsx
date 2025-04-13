@@ -22,9 +22,9 @@ export default function Navbar() {
         <span onClick={Carousel} className="navbar-link">
           3D Carousel
         </span>
-        <span onClick={Carousel} className="navbar-link">
+        {/* <span onClick={Carousel} className="navbar-link">
           Example
-        </span>
+        </span> */}
       </div>
     </div>
   );
