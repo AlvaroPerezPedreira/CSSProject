@@ -28,6 +28,8 @@
 
 .carousel-button-container {
   display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
   gap: 30px;
   width: auto;
 }
@@ -87,5 +89,24 @@
   to {
     transform: perspective(var(--perspectiveZ)) rotateX(var(--perspectiveX))
       rotateY(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-title-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .carousel-title {
+    font-size: 22px;
+  }
+
+  .carousel-button {
+    font-size: 12px;
+  }
+
+  .carousel-slider {
+    top: 40%;
   }
 }
