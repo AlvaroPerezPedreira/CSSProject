@@ -13,6 +13,10 @@ export default function Navbar() {
     navigate("/3d-carousel");
   };
 
+  const Card = () => {
+    navigate("/3d-card");
+  };
+
   return (
     <div className="navbar-container">
       <div className="navbar-title">
@@ -22,9 +26,9 @@ export default function Navbar() {
         <span onClick={Carousel} className="navbar-link">
           3D Carousel
         </span>
-        {/* <span onClick={Carousel} className="navbar-link">
-          Example
-        </span> */}
+        <span onClick={Card} className="navbar-link">
+          3D Card
+        </span>
       </div>
     </div>
   );
