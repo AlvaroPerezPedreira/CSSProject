@@ -22,8 +22,10 @@
   position: relative;
   background-image: conic-gradient(
     from var(--angle),
-    transparent 70%,
-    var(--home-description-gradient)
+    transparent 75%,
+    red,
+    #ff6f3c,
+    #f5cb5c
   );
   padding: 5px;
   animation: 4s spin linear infinite;

@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <div className="navbar-container">
       <div className="navbar-title">
-        <span onClick={Home}>CSS Project</span>
+        <span className="navbar-title-span" onClick={Home}>CSS Project</span>
       </div>
       <div className="navbar-links">
         <span onClick={Carousel} className="navbar-link">

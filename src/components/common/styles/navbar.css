@@ -33,12 +33,18 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.navbar-title:hover {
-  color: var(--navbar-title-hover);
-}
-
 .navbar-title:hover::after {
   transform: translateX(-50%) scaleX(1);
+}
+
+.navbar-title-span {
+  background: linear-gradient(to right,
+  red,
+  #ff6f3c,
+  #f5cb5c
+);
+  background-clip: text;
+  color: transparent;
 }
 
 .navbar-links {
