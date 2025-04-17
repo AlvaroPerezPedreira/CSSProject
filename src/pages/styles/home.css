@@ -3,7 +3,116 @@
 
 .home-container {
   background-color: var(--home-background);
-  height: 93.5vh;
+  height: 100dvh;
+}
+
+.home-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 30vh;
+  gap: 20px;
+  min-width: 600px;
+}
+
+.home-title {
+  font-size: 36px;
+  /* min-width: 600px; */
+  background: linear-gradient(to right, #00cfff, #6df9ff, #00ffd5);
+  background-clip: text;
+  color: transparent;
+}
+
+.home-author {
+  color: var(--home-text-color);
+  font-size: 36px;
+  min-width: 600px;
+}
+
+.home-author span {
+  position: relative;
+}
+
+.home-author span::before {
+  content: "Álvaro Pérez";
+  color: var(--home-text2);
+  animation: texts 20s infinite;
+}
+
+.home-author span::after {
+  position: absolute;
+  content: "";
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: var(--home-background);
+  border-left: 2px solid white;
+  right: -8px;
+  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid black;
+  }
+}
+
+@keyframes texts {
+  0%,
+  20% {
+    content: "Álvaro Pérez";
+    color: var(--home-text2);
+  }
+  21%,
+  40% {
+    content: "Software Engineer";
+    color: var(--home-text1);
+  }
+  41%,
+  60% {
+    content: "Álvaro Pérez";
+    color: var(--home-text2);
+  }
+  61%,
+  80% {
+    content: "Software Engineer";
+    color: var(--home-text1);
+  }
+  81%,
+  100% {
+    content: "Álvaro Pérez";
+    color: var(--home-text2);
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85%,
+  100% {
+    width: calc(100% + 8px);
+  }
+}
+
+.home-description-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,9 +132,9 @@
   background-image: conic-gradient(
     from var(--angle),
     transparent 75%,
-    red,
-    #ff6f3c,
-    #f5cb5c
+    #00cfff,
+    #6df9ff,
+    #00ffd5
   );
   padding: 5px;
   animation: 4s spin linear infinite;
@@ -35,8 +144,8 @@
   width: 395px;
   height: 295px;
   border-radius: 40px;
-  background: #222;
-  color: white;
+  background: var(--home-background2);
+  color: var(--home-text-color);
   padding: 2rem;
   position: absolute;
   top: 50%;
@@ -58,5 +167,18 @@
   }
   to {
     --angle: 360deg;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-title-container {
+    min-width: 100%;
+  }
+
+  .home-title,
+  .home-author {
+    font-size: 36px;
+    min-width: 100%;
+    padding-left: 25px;
   }
 }

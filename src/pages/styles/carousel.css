@@ -1,10 +1,10 @@
 .carousel-container {
   width: 100%;
-  height: calc(100dvh - 6.5dvh);
+  height: 100dvh;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: var(--carousel-background);
+  background: linear-gradient(to top, #2e2e2e, #1c1c1c, #0a0a0a);
 }
 
 .carousel-title-container {
@@ -12,18 +12,21 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 150px;
-  padding-top: 60px;
+  gap: 400px;
+  padding-top: 100px;
 }
 
 .carousel-title {
   font-size: 30px;
   font-weight: bold;
-  color: var(--carousel-title);
   text-transform: capitalize;
   letter-spacing: 2px;
   margin: 0;
   z-index: 2;
+
+  background: linear-gradient(to right, red, #ff6f3c, #f5cb5c);
+  background-clip: text;
+  color: transparent;
 }
 
 .carousel-button-container {
@@ -99,7 +102,7 @@
   }
 
   .carousel-title {
-    font-size: 22px;
+    font-size: 36px;
   }
 
   .carousel-button {
