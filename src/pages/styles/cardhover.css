@@ -1,0 +1,158 @@
+.cardHover-page {
+  width: 100%;
+  height: 100dvh;
+  background: linear-gradient(to top, #2e2e2e, #1c1c1c, #0a0a0a);
+}
+
+.cardHover-title-container {
+  height: 10dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.cardHover-title {
+  font-size: 36px;
+  color: white;
+  display: inline-block;
+  animation: wave 1.5s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.cardHover-list {
+  padding-top: 200px;
+  display: flex;
+  align-items: row;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.cardHover-item {
+  transition: 0.5s;
+  filter: brightness(0);
+  padding: 0 20px;
+  margin-left: -30px;
+}
+
+.cardHover-item:hover {
+  filter: brightness(1);
+  transform: translateZ(200px);
+}
+
+/* +* Para refererirse al siguiente elemento*/
+.cardHover-item:hover + * {
+  filter: brightness(0.6);
+  transform: translateZ(150px) rotateY(40deg);
+}
+
+.cardHover-item:hover + * + * {
+  filter: brightness(0.4);
+  transform: translateZ(70px) rotateY(20deg);
+}
+
+.cardHover-item:hover + * + * + * {
+  filter: brightness(0.2);
+  transform: translateZ(30px) rotateY(10deg);
+}
+
+/* +* el item que el siguiente elemento sea el :hover*/
+.cardHover-item:has(+ *:hover) {
+  filter: brightness(0.6);
+  transform: translateZ(150px) rotateY(-40deg);
+}
+
+.cardHover-item:has(+ * + *:hover) {
+  filter: brightness(0.4);
+  transform: translateZ(70px) rotateY(-20deg);
+}
+
+.cardHover-item:has(+ * + * + *:hover) {
+  filter: brightness(0.2);
+  transform: translateZ(30px) rotateY(-10deg);
+}
+
+.cardHover-item img {
+  width: 100px;
+  height: 200px;
+}
+
+@media (max-width: 1200px) {
+  .cardHover-item.hidden-tablet {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardHover-title-container {
+    padding-top: 50px;
+  }
+
+  .cardHover-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+  }
+
+  .cardHover-item.hidden-mobile {
+    display: none;
+  }
+
+  .cardHover-item {
+    padding: 20px 0;
+    margin-top: -30px;
+  }
+
+  .cardHover-item img {
+    width: 200px;
+    height: 100px;
+  }
+
+  .cardHover-item:hover {
+    filter: brightness(1);
+    transform: translateZ(200px);
+  }
+
+  .cardHover-item:hover + * {
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateX(-40deg);
+  }
+
+  .cardHover-item:hover + * + * {
+    filter: brightness(0.4);
+    transform: translateZ(70px) rotateX(-20deg);
+  }
+
+  .cardHover-item:hover + * + * + * {
+    filter: brightness(0.2);
+    transform: translateZ(30px) rotateX(-10deg);
+  }
+
+  .cardHover-item:has(+ *:hover) {
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateX(40deg);
+  }
+
+  .cardHover-item:has(+ * + *:hover) {
+    filter: brightness(0.4);
+    transform: translateZ(70px) rotateX(20deg);
+  }
+
+  .cardHover-item:has(+ * + * + *:hover) {
+    filter: brightness(0.2);
+    transform: translateZ(30px) rotateX(10deg);
+  }
+}

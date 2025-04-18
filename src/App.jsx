@@ -2,6 +2,7 @@ import "./App.css";
 import Carousel from "./pages/Carousel";
 import Home from "./pages/Home";
 import Card from "./pages/Card";
+import CardHover from "./pages/CardHover";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
         </div>
         <div className="section-container">
           <Carousel />
+        </div>
+        <div className="section-container">
+          <CardHover />
         </div>
         <div className="section-container">
           <Card />
