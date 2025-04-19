@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./styles/carousel.css";
-import { sizesZ, sizesX, time } from "../utils/Constants";
+import "./carousel.css";
+import { sizesZ, sizesX, time } from "../../utils/Constants";
 
 export default function Carousel() {
   const totalNumber = 12;

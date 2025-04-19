@@ -1,0 +1,119 @@
+.glassM-page {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/glassmorphism/desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.glassM-loginContainer {
+  width: 400px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  padding: 20px;
+  overflow: hidden;
+
+  /* Glassmorphism */
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); /* for iOS*/
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+.glassM-loginTitle {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glassM-loginTitle span {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    var(--glassmorphism-gray),
+    var(--glassmorphism-fullBlack)
+  );
+  background-clip: text;
+}
+
+.glassM-loginInputs {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.glassM-loginInputs input,
+.glassM-loginInputs button {
+  all: unset;
+  height: 3dvh;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: var(--glassmorphism-background);
+  box-shadow: 0 10px 30px var(--glassmorphism-boxshadow);
+}
+
+.glassM-loginInputs input {
+  color: var(--glassmorphism-fullWhite);
+  text-align: start;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.glassM-loginInputs button {
+  cursor: pointer;
+  margin-top: 30px;
+  background-color: var(--glassmorphism-fullWhite);
+  color: var(--glassmorphism-background);
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.glassM-loginInputs button:hover {
+  transform: scale(1.1);
+}
+
+.glassM-loginFooter {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 10px;
+  /* background-color: blue; */
+}
+
+.glassM-loginFooter span {
+  height: 6dvh;
+  padding: 10px;
+  color: var(--glassmorphism-fullWhite);
+}
+
+@media (max-width: 768px) {
+  .glassM-page {
+    background-image: url("/images/glassmorphism/mobile.jpg");
+  }
+}

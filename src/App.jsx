@@ -1,8 +1,9 @@
 import "./App.css";
-import Carousel from "./pages/Carousel";
-import Home from "./pages/Home";
-import Card from "./pages/Card";
-import CardHover from "./pages/CardHover";
+import Carousel from "./pages/Carousel/Carousel";
+import Home from "./pages/Home/Home";
+import Card from "./pages/Card/Card";
+import CardHover from "./pages/CardHover/CardHover";
+import Glassmorphism from "./pages/Glassmorphism/Glassmorphism";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         </div>
         <div className="section-container">
           <Carousel />
+        </div>
+        <div className="section-container">
+          <Glassmorphism />
         </div>
         <div className="section-container">
           <CardHover />

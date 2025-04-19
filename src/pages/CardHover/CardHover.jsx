@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/cardhover.css";
+import "./cardhover.css";
 
 export default function CardHover() {
   return (
