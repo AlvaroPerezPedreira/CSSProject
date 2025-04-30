@@ -1,0 +1,292 @@
+.slider-page {
+  width: 100%;
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: 200px auto 200px;
+  grid-template-rows: 200px auto 200px;
+  grid-template-areas:
+    "slider-left slider-title slider-right"
+    "slider-left slider-middle slider-right"
+    "slider-left slider-footer slider-right";
+}
+
+/* Grid template */
+
+.slider-title {
+  grid-area: slider-title;
+  border: 1px solid green;
+}
+
+.slider-left {
+  grid-area: slider-left;
+  border: 1px solid green;
+}
+
+.slider-right {
+  grid-area: slider-right;
+  border: 1px solid green;
+}
+
+.slider-middle {
+  grid-area: slider-middle;
+  border: 1px solid green;
+}
+
+.slider-footer {
+  grid-area: slider-footer;
+  border: 1px solid green;
+}
+
+/* styles */
+
+.slider-title {
+}
+
+/* Slider left */
+
+.slider-left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sliderL-itemList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: calc(var(--width) * var(--quantity));
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 20% 80%,
+    transparent
+  );
+}
+
+.sliderL-itemList:hover .sliderL-item {
+  animation-play-state: paused !important;
+}
+
+.sliderL-item {
+  width: calc(var(--width));
+  height: calc(var(--height));
+  position: absolute;
+  bottom: 100%;
+  animation: autoRun3 10s linear infinite;
+  animation-delay: calc((10s / var(--quantity)) * var(--position) * -1);
+}
+
+@keyframes autoRun3 {
+  0% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: calc(var(--width) * -1);
+  }
+}
+
+/* Slider right */
+
+.slider-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sliderR-itemList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: calc(var(--width) * var(--quantity));
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 40% 60%,
+    transparent
+  );
+}
+
+.sliderR-itemList:hover .sliderR-item {
+  animation-play-state: paused !important;
+}
+
+.sliderR-item {
+  width: calc(var(--width));
+  height: calc(var(--height));
+  position: absolute;
+  top: 100%;
+  animation: autoRun4 10s linear infinite;
+  animation-delay: calc((10s / var(--quantity)) * var(--position) * -1);
+}
+
+@keyframes autoRun4 {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: calc(var(--width) * -1);
+  }
+}
+
+/* Middle sliders */
+
+.slider-middle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+}
+
+/* Middle slider 1*/
+
+.sliderM1-itemList {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  height: var(--height);
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20% 80%,
+    transparent
+  );
+}
+
+.sliderM1-itemList:hover .sliderM-item {
+  animation-play-state: paused !important;
+}
+
+.sliderM1-item {
+  width: calc(var(--width));
+  height: calc(var(--height));
+  position: absolute;
+  left: 100%;
+  animation: autoRun1 10s linear infinite;
+  animation-delay: calc((10s / var(--quantity)) * var(--position) * -1);
+}
+
+@keyframes autoRun1 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: calc(var(--width) * -1);
+  }
+}
+
+/* Middle slider 2*/
+
+.sliderM2-itemList {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  height: var(--height);
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20% 80%,
+    transparent
+  );
+}
+
+.sliderM2-itemList:hover .sliderM2-item {
+  animation-play-state: paused !important;
+}
+
+.sliderM2-item {
+  width: calc(var(--width));
+  height: calc(var(--height));
+  position: absolute;
+  left: calc(var(--width) * -1);
+  animation: autoRun2 12s linear infinite;
+  animation-delay: calc((12s / var(--quantity)) * var(--position) * -1);
+}
+
+@keyframes autoRun2 {
+  0% {
+    left: calc(var(--width) * -1);
+  }
+  100% {
+    left: calc(var(--width) + 100%);
+  }
+}
+
+/* Middle slider 3*/
+
+.sliderM3-itemList {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  height: var(--height);
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20% 80%,
+    transparent
+  );
+}
+
+.sliderM3-itemList:hover .sliderM3-item {
+  animation-play-state: paused !important;
+}
+
+.sliderM3-item {
+  width: calc(var(--width));
+  height: calc(var(--height));
+  position: absolute;
+  left: calc(var(--width) * -1);
+  animation: autoRun1 8s linear infinite;
+  animation-delay: calc((8s / var(--quantityM3)) * var(--position) * -1);
+}
+
+/* Middle slider 4*/
+
+.sliderM4-itemList {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  height: var(--height);
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20% 80%,
+    transparent
+  );
+}
+
+.sliderM4-itemList:hover .sliderM4-item {
+  animation-play-state: paused !important;
+}
+
+.sliderM4-item {
+  width: calc(var(--width));
+  height: calc(var(--height));
+  position: absolute;
+  left: calc(var(--width) * -1);
+  animation: autoRun2 5s linear infinite;
+  animation-delay: calc((5s / var(--quantityM4)) * var(--position) * -1);
+}
+
+/* Footer slider */
+
+.slider-footer {
+}

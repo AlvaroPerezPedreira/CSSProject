@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import Card from "./pages/Card/Card";
 import CardHover from "./pages/CardHover/CardHover";
 import Glassmorphism from "./pages/Glassmorphism/Glassmorphism";
+import Slider from "./pages/Slider/Slider";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </div>
         <div className="section-container">
           <Card />
+        </div>
+        <div className="section-container">
+          <Slider />
         </div>
       </div>
     </>
