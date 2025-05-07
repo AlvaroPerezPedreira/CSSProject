@@ -43,7 +43,11 @@ import {
 export default function Slider() {
   return (
     <div className="slider-page">
-      <div className="slider-title"></div>
+      <div className="slider-title">
+        <span className="slider-title-span">
+          This is a <mark className="marquee">marquee</mark> section
+        </span>
+      </div>
       <div className="slider-left">
         <div
           className="sliderL-itemList"
@@ -278,7 +282,6 @@ export default function Slider() {
           </div>
         </div>
       </div>
-      <div className="slider-footer"></div>
     </div>
   );
 }
